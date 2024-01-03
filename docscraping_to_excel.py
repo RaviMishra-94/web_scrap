@@ -9,7 +9,7 @@ def download(url):
     return requests.get(url).text
 
 # URL to download
-google_sheets_link = "https://docs.google.com/spreadsheets/d/e/2PACX-1vTFlwrVJW9Qi8CV39mZhChTL_yX-B2xgG4jJpv35whAkq_hd1obF9aGhaH6m63cgwennEPtwGs-n7f0/pubhtml?gid=1318557900#"
+google_sheets_link = "link to your doc"
 downloaded_site = download(google_sheets_link)
 soup = BeautifulSoup(downloaded_site, 'html5lib')
 
@@ -40,7 +40,7 @@ time.sleep(5)
    GraceAvail'26 = output_google_sheets_Sheet_7.xlsx 
    EvoAvail'26   = output_google_sheets_Sheet_8.xlsx 
    '''
-df = pd.read_excel("e:/upwork/Grace/output_google_sheets_Sheet_3.xlsx") #path to your directory
+df = pd.read_excel("e:/output_google_sheets_Sheet_3.xlsx") #path to your directory
 
 df = df.iloc[15:]
 df = df.iloc[:-22]
